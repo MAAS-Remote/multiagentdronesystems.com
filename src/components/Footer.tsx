@@ -141,12 +141,6 @@ const Footer: React.FC = () => {
                 </a>
               </p>
               <p>
-                <a 
-                  href="mailto:financial@multiagentdronesystems.com"
-                  className="hover:text-white transition-colors duration-300"
-                >
-                  financial@multiagentdronesystems.com
-                </a>
               </p>
               <p>
                 <a 

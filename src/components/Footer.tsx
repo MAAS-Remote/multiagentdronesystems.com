@@ -188,7 +188,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © 2025 Multi-Agent Drone Systems Inc. All rights reserved.
+              © 2026 Multi-Agent Drone Systems Inc. All rights reserved.
             </p>
             <div className="flex space-x-6">
               {['Terms of Service', 'Privacy Policy', 'Cookie Policy'].map((item) => (

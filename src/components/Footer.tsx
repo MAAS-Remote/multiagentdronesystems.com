@@ -131,7 +131,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Get In Touch</h3>
             <address className="text-gray-400 not-italic mb-4 space-y-2">
-              <p>Edmonton, Alberta, Canada</p>
+              <p>Ottawa, Canada</p>
               <p>
                 <a 
                   href="mailto:info@multiagentdronesystems.com"
@@ -144,10 +144,10 @@ const Footer: React.FC = () => {
               </p>
               <p>
                 <a 
-                  href="tel:+17802784283"
+                  href="tel:+16134132941"
                   className="hover:text-white transition-colors duration-300"
                 >
-                  +1 (780) 278-4283
+                  +1 (613) 413-2941
                 </a>
               </p>
             </address>

@@ -294,7 +294,7 @@ const ProductPage: React.FC = () => {
               <div className="aspect-square bg-white rounded-2xl shadow-xl overflow-hidden">
                 <img
                   src={drone.image_url}
-                  alt={drone.name}
+                  alt={`${drone.name} autonomous drone by MADS Inc — multi-agent capable`}
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
@@ -463,7 +463,7 @@ const ProductPage: React.FC = () => {
                       <div className="aspect-square overflow-hidden h-48">
                         <img
                           src={product.image_url}
-                          alt={product.name}
+                          alt={`${product.name} autonomous drone by MADS Inc`}
                           className="w-full h-full object-cover"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;

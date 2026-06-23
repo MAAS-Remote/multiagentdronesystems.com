@@ -225,7 +225,7 @@ const CartWishlistPanel: React.FC<CartWishlistPanelProps> = ({ isOpen, onClose, 
                       >
                         <img
                           src={item.drone?.image_url}
-                          alt={item.drone?.name}
+                          alt={item.drone?.name ? `${item.drone.name} autonomous drone by MADS Inc` : 'Drone product image'}
                           className="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;

@@ -112,7 +112,7 @@ const JobDescriptionModal: React.FC<JobDescriptionModalProps> = ({
               <div className="mb-6">
                 <img
                   src={position.image_url}
-                  alt={position.title}
+                  alt={`${position.title} role at MADS — Multi-Agent Drone Systems`}
                   className="w-full h-64 object-cover rounded-lg"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;

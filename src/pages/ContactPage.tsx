@@ -204,7 +204,7 @@ const ContactPage: React.FC = () => {
 
         {/* Logo in bottom left */}
         <div className="absolute bottom-8 left-8">
-          <img src="/images/icon.png" alt="MADS Logo" className="w-8 h-8 opacity-60" />
+          <img src="/images/icon.png" alt="" className="w-8 h-8 opacity-60" />
         </div>
       </motion.div>
 

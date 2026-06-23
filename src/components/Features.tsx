@@ -269,7 +269,7 @@ const Features: React.FC = () => {
                     <div className="w-full h-full bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-lg overflow-hidden border border-gray-700/30 backdrop-blur-sm">
                       <img
                         src={currentDrone.image_url}
-                        alt={currentDrone.name}
+                        alt={`${currentDrone.name} — MADS autonomous drone shown in system dashboard`}
                         className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;

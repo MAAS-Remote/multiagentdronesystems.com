@@ -316,7 +316,7 @@ const Products: React.FC = () => {
                     >
                       <img
                         src={drone.image_url}
-                        alt={drone.name}
+                        alt={`${drone.name} autonomous drone — MADS multi-agent system`}
                         className={`w-full h-full object-cover transition-transform duration-700 ${
                           drone.produced 
                             ? 'group-hover:scale-110' 

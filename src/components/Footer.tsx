@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Column 1 - Logo & Social */}
           <div>
-            <img src="/images/logo.png" alt="MADS Logo" className="w-72 h-12 mb-6 mt-[-2px] ml-[-4px]" />
+            <img src="/images/logo.png" alt="MADS Inc — Multi-Agent Drone Systems logo" className="w-72 h-12 mb-6 mt-[-2px] ml-[-4px]" />
             <p className="text-gray-400 mb-3">
               Revolutionary solutions for tomorrow's challenges
             </p>

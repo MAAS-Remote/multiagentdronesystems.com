@@ -70,7 +70,7 @@ const Careers: React.FC = () => {
         <div className="hidden md:block md:w-3/5 h-screen relative overflow-hidden">
           <img
             src="/images/careers.png"
-            alt="Join Our Team"
+            alt="MADS team members collaborating on autonomous drone systems at company headquarters in Ottawa"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
           {/* Gradient overlay for better text contrast if needed */}

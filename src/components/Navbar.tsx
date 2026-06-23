@@ -131,7 +131,7 @@ const Navbar: React.FC<NavbarProps> = ({ onSectionChange }) => {
       <div className="absolute top-4 left-4 z-[10000]">
         <img
           src="/images/icon.png"
-          alt="MADS Logo"
+          alt="MADS Inc — navigate to homepage"
           className="w-8 h-8"
         />
       </div>

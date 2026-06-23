@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, X, Mail } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useDrones } from '../hooks/useSupabaseData';
 
@@ -392,6 +392,25 @@ const Products: React.FC = () => {
                   </div>
                 );
               })}
+            </div>
+
+            {/* Conversion CTA strip */}
+            <div className="mt-16 text-center">
+              <p className="text-gray-600 mb-6 text-lg">Need help choosing the right system for your mission?</p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gray-900 text-white font-medium text-lg rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+                >
+                  Get Pricing
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-8 py-4 border-2 border-gray-900 text-gray-900 font-medium text-lg rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+                >
+                  Contact Sales
+                </Link>
+              </div>
             </div>
 
             {/* Dot Indicators */}

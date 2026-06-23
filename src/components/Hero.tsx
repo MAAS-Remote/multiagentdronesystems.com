@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Button from './Button';
 
 const Hero: React.FC = () => {
@@ -49,8 +50,8 @@ const Hero: React.FC = () => {
             Revolutionizing industries through autonomous navigation and collaborative drone technology
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-            <Button 
-              variant="primary" 
+            <Button
+              variant="primary"
               className="shadow-xl text-xl px-12 py-6"
               onClick={() => {
                 document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
@@ -58,8 +59,8 @@ const Hero: React.FC = () => {
             >
               Explore Our Drones
             </Button>
-            <Button 
-              variant="secondary" 
+            <Button
+              variant="secondary"
               className="shadow-xl text-xl px-12 py-6"
               onClick={() => {
                 document.getElementById('technology')?.scrollIntoView({ behavior: 'smooth' });
@@ -67,6 +68,27 @@ const Hero: React.FC = () => {
             >
               Our Technology
             </Button>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-6 mt-6">
+            <Link
+              to="/contact"
+              className="inline-flex items-center text-white/80 hover:text-[#FFD700] font-medium text-lg transition-colors duration-300 group"
+            >
+              Request a Demo
+              <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            <span className="text-white/30 hidden sm:inline" aria-hidden="true">|</span>
+            <Link
+              to="/contact"
+              className="inline-flex items-center text-white/80 hover:text-[#FFD700] font-medium text-lg transition-colors duration-300 group"
+            >
+              Contact Sales
+              <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </div>

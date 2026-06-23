@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { ArrowLeft, Plus, Minus, ShoppingCart, X, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
@@ -405,8 +405,8 @@ const ProductPage: React.FC = () => {
                   className={`flex-1 py-5 px-10 rounded-lg font-bold text-lg transition-all duration-300 transform shadow-lg ${
                     drone.quote
                       ? 'bg-orange-500 text-white hover:bg-orange-600 hover:scale-105'
-                      : !drone.in_stock 
-                      ? 'bg-gray-400 text-gray-200 cursor-not-allowed' 
+                      : !drone.in_stock
+                      ? 'bg-gray-400 text-gray-200 cursor-not-allowed'
                       : 'bg-gray-900 text-white hover:bg-gray-800 hover:scale-105'
                   }`}
                 >
@@ -428,13 +428,29 @@ const ProductPage: React.FC = () => {
                   }`}
                 >
                   <ShoppingCart className="w-5 h-5" />
-                  {drone.quote 
-                    ? 'Get Quote' 
-                    : drone.in_stock 
-                      ? cartButtonText 
+                  {drone.quote
+                    ? 'Get Quote'
+                    : drone.in_stock
+                      ? cartButtonText
                       : wishlistButtonText
                   }
                 </button>
+              </div>
+
+              {/* Secondary CTAs */}
+              <div className="mt-4 pt-4 border-t border-gray-200 flex flex-col sm:flex-row gap-3">
+                <Link
+                  to="/contact"
+                  className="flex-1 text-center py-3 px-6 rounded-lg border-2 border-[#DAA520] text-gray-900 font-medium hover:bg-[#FFD700] hover:border-[#FFD700] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#DAA520] focus:ring-offset-2"
+                >
+                  Get Pricing
+                </Link>
+                <Link
+                  to="/contact"
+                  className="flex-1 text-center py-3 px-6 rounded-lg border-2 border-gray-300 text-gray-700 font-medium hover:border-gray-900 hover:text-gray-900 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+                >
+                  See It in Action →
+                </Link>
               </div>
             </motion.div>
           </div>

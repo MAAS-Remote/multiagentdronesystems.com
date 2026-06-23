@@ -9,7 +9,8 @@ const navItems = [
   { name: 'Products', href: '#products', id: 'products' },
   { name: 'FAQ', href: '#faq', id: 'faq' },
   { name: 'Careers', href: '#careers', id: 'careers' },
-  { name: 'Contact', href: '/contact', id: 'contact' }
+  { name: 'Request Demo', href: '/contact', id: 'request-demo' },
+  { name: 'Contact', href: '/contact', id: 'contact' },
 ];
 
 interface Section {
@@ -91,8 +92,7 @@ const Navbar: React.FC<NavbarProps> = ({ onSectionChange }) => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, itemName: string) => {
     e.preventDefault();
     
-    if (itemName === 'Contact') {
-      // Store current scroll position before navigating
+    if (itemName === 'Contact' || itemName === 'Request Demo') {
       sessionStorage.setItem('scrollPosition', window.scrollY.toString());
       navigate('/contact');
       return;
@@ -150,7 +150,9 @@ const Navbar: React.FC<NavbarProps> = ({ onSectionChange }) => {
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href, item.name)}
               className={`text-sm font-medium transition-all duration-300 relative hover:scale-105 ${
-                item.name === 'Contact'
+                item.name === 'Request Demo'
+                  ? 'px-3 py-1 -mt-1 bg-[#FFD700] text-gray-900 rounded hover:bg-[#DAA520] focus:outline-none focus:ring-2 focus:ring-[#DAA520] focus:ring-offset-1'
+                  : item.name === 'Contact'
                   ? 'px-3 py-1 -mt-1 border border-[#DAA520] text-gray-900 bg-white rounded hover:bg-[#FFD700] hover:border-[#FFD700]'
                   : activeSection === item.id ? 'text-white glow' : 'text-white/60 hover:text-white'
               }`}

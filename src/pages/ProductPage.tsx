@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { ArrowLeft, Plus, Minus, ShoppingCart, X, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { breadcrumbSchema, productSchema, SITE_URL } from '../lib/schemas';
 import { motion } from 'framer-motion';
 import { AnimatePresence } from 'framer-motion';
 import { supabase } from '../lib/supabase';
@@ -268,6 +269,23 @@ const ProductPage: React.FC = () => {
       <Helmet>
         <title>{drone.name} — MADS Inc | Multi-Agent Drone Systems</title>
         <meta name="description" content={`${drone.description?.slice(0, 140) ?? `Explore the ${drone.name} autonomous drone from MADS Inc`}. Available from Multi-Agent Drone Systems, Ottawa, Canada.`} />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', url: SITE_URL },
+            { name: 'Products', url: `${SITE_URL}/#products` },
+            { name: drone.name, url: `${SITE_URL}/product/${drone.id}` },
+          ]))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(productSchema({
+            id: drone.id,
+            name: drone.name,
+            description: drone.description,
+            image_url: drone.image_url,
+            price: drone.price,
+            in_stock: drone.in_stock,
+          }))}
+        </script>
       </Helmet>
       {/* Back Button */}
       <div className="fixed top-6 left-6 z-50">

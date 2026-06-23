@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { orgSchema } from './lib/schemas';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
@@ -37,6 +38,9 @@ const AppContent: React.FC = () => {
 
   return (
     <div className="relative">
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
+      </Helmet>
       {/* Reviews component should be visible on all pages except contact and product pages */}
       {location.pathname !== '/contact' && !location.pathname.startsWith('/product') && (
         <Reviews activeSection={activeSection} />

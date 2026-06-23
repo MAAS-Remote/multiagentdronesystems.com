@@ -3,6 +3,7 @@ import { ArrowUpRight, MapPin, Clock, ArrowLeft, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { breadcrumbSchema, SITE_URL } from '../lib/schemas';
 import { usePositions } from '../hooks/useSupabaseData';
 import { useAuth } from '../contexts/AuthContext';
 import ApplicationModal from '../components/ApplicationModal';
@@ -243,6 +244,12 @@ const CareersPage: React.FC = () => {
       <Helmet>
         <title>Careers at MADS — Join Our Team | Multi-Agent Drone Systems</title>
         <meta name="description" content="Join the MADS team in Ottawa, Canada. We're hiring engineers, AI specialists, and operations professionals to shape the future of autonomous multi-drone systems." />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', url: SITE_URL },
+            { name: 'Careers', url: `${SITE_URL}/careers` },
+          ]))}
+        </script>
       </Helmet>
       {/* Back Button */}
       <div className="fixed top-6 left-6 z-50">

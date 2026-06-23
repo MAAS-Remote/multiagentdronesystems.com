@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { supabase } from '../lib/supabase';
+import { breadcrumbSchema, SITE_URL } from '../lib/schemas';
 
 interface FormErrors {
   firstName?: string;
@@ -145,6 +146,12 @@ const ContactPage: React.FC = () => {
       <Helmet>
         <title>Contact MADS — Get in Touch | Multi-Agent Drone Systems</title>
         <meta name="description" content="Contact Multi-Agent Drone Systems in Ottawa, Canada. Call +1 (613) 413-2941, email info@multiagentdronesystems.com, or send a message using our contact form." />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', url: SITE_URL },
+            { name: 'Contact', url: `${SITE_URL}/contact` },
+          ]))}
+        </script>
       </Helmet>
       {/* Back Button */}
       <div className="fixed top-6 left-6 z-50">

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ChevronDown, HelpCircle, MessageCircle, Info, AlertCircle, CheckCircle } from 'lucide-react';
 import { useFAQ } from '../hooks/useSupabaseData';
+import { faqPageSchema } from '../lib/schemas';
 
 interface FAQ {
   id: string;
@@ -71,6 +73,11 @@ const FAQ: React.FC = () => {
 
   return (
     <section id="faq" className="relative z-40 bg-white -mt-20 pt-20 pb-32">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(faqPageSchema(faqData.map((item: FAQ) => ({ question: item.question, answer: item.answer }))))}
+        </script>
+      </Helmet>
       <div className="relative min-h-screen flex">
         {/* Background Image Section - Left Side */}
         <div className="w-1/3 min-h-screen relative overflow-hidden hidden md:block">

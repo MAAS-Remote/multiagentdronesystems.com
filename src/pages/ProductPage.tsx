@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Plus, Minus, ShoppingCart, X, Mail } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { AnimatePresence } from 'framer-motion';
 import { supabase } from '../lib/supabase';
@@ -264,6 +265,10 @@ const ProductPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>{drone.name} — MADS Inc | Multi-Agent Drone Systems</title>
+        <meta name="description" content={`${drone.description?.slice(0, 140) ?? `Explore the ${drone.name} autonomous drone from MADS Inc`}. Available from Multi-Agent Drone Systems, Ottawa, Canada.`} />
+      </Helmet>
       {/* Back Button */}
       <div className="fixed top-6 left-6 z-50">
         <button

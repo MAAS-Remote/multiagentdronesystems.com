@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
@@ -15,6 +16,10 @@ import ProductPage from './pages/ProductPage';
 const HomePage: React.FC<{ onSectionChange: (section: string) => void }> = ({ onSectionChange }) => {
   return (
     <>
+      <Helmet>
+        <title>MADS Inc — Multi-Agent Drone Systems | Ottawa, Canada</title>
+        <meta name="description" content="Multi-Agent Drone Systems (MADS) builds autonomous multi-drone platforms for surveillance, mapping, and delivery. Explore our fleet and technology from Ottawa, Canada." />
+      </Helmet>
       <Navbar onSectionChange={onSectionChange} />
       <Hero />
       <Features />

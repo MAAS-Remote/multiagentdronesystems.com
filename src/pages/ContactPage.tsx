@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Mail, Phone, MapPin, AlertCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 
 interface FormErrors {
@@ -151,6 +152,10 @@ const ContactPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 flex">
+      <Helmet>
+        <title>Contact MADS — Get in Touch | Multi-Agent Drone Systems</title>
+        <meta name="description" content="Contact Multi-Agent Drone Systems in Ottawa, Canada. Call +1 (613) 413-2941, email info@multiagentdronesystems.com, or send a message using our contact form." />
+      </Helmet>
       {/* Back Button */}
       <div className="fixed top-6 left-6 z-50">
         <button

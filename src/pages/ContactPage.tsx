@@ -3,6 +3,7 @@ import { ArrowLeft, Mail, Phone, MapPin, AlertCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import { supabase } from '../lib/supabase';
 
 interface FormErrors {
   firstName?: string;
@@ -118,32 +119,21 @@ const ContactPage: React.FC = () => {
     setErrors({});
     
     try {
-      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-        },
-        body: JSON.stringify(formData),
+      const { error: dbError } = await supabase.from('contact').insert({
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
       });
-      
-      const result = await response.json();
-      
-      if (result.success) {
-        setSubmitMessage('Thank you! Your message has been sent successfully. We\'ll get back to you soon.');
-        setSubmitSuccess(true);
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          message: ''
-        });
-      } else {
-        setErrors({ submit: result.error || 'Sorry, there was an error sending your message. Please try again.' });
-      }
+
+      if (dbError) throw dbError;
+
+      setSubmitMessage("Thank you! Your message has been received. We'll get back to you soon.");
+      setSubmitSuccess(true);
+      setFormData({ firstName: '', lastName: '', email: '', phone: '', message: '' });
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Error submitting contact form:', error);
       setErrors({ submit: 'Sorry, there was an error sending your message. Please check your connection and try again.' });
     } finally {
       setIsSubmitting(false);

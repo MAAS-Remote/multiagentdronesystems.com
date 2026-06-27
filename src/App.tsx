@@ -10,6 +10,7 @@ import FAQ from './components/FAQ';
 import Careers from './components/Careers';
 import Footer from './components/Footer';
 import Reviews from './components/Reviews';
+import AboutPage from './pages/AboutPage';
 import CareersPage from './pages/CareersPage';
 import ContactPage from './pages/ContactPage';
 import ProductPage from './pages/ProductPage';
@@ -48,6 +49,7 @@ const AppContent: React.FC = () => {
       
       <Routes>
         <Route path="/" element={<HomePage onSectionChange={setActiveSection} />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/product/:id" element={<ProductPage />} />

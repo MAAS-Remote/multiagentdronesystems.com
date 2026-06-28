@@ -5,7 +5,13 @@ import { orgSchema } from './lib/schemas';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
+import WhyNature from './components/WhyNature';
+import HomepageDepartments from './components/HomepageDepartments';
 import Products from './components/Products';
+import WhatWeAre from './components/WhatWeAre';
+import MultiAgent from './components/MultiAgent';
+import UseCases from './components/UseCases';
+import Ottawa from './components/Ottawa';
 import FAQ from './components/FAQ';
 import Careers from './components/Careers';
 import Footer from './components/Footer';
@@ -20,12 +26,18 @@ const HomePage: React.FC<{ onSectionChange: (section: string) => void }> = ({ on
     <>
       <Helmet>
         <title>MADS Inc — Multi-Agent Drone Systems | Ottawa, Canada</title>
-        <meta name="description" content="Multi-Agent Drone Systems (MADS) builds autonomous multi-drone platforms for surveillance, mapping, and delivery. Explore our fleet and technology from Ottawa, Canada." />
+        <meta name="description" content="MADS — nature-inspired, multi-agent drone systems from Ottawa, Canada. Avian aerodynamics and distributed autonomy for surveillance, mapping, and delivery." />
       </Helmet>
       <Navbar onSectionChange={onSectionChange} />
       <Hero />
       <Features />
+      <WhyNature />
+      <HomepageDepartments />
       <Products />
+      <WhatWeAre />
+      <MultiAgent />
+      <UseCases />
+      <Ottawa />
       <FAQ />
       <Careers />
       <Footer />

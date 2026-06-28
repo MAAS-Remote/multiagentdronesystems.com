@@ -90,6 +90,12 @@ const Hero: React.FC = () => {
               </svg>
             </Link>
           </div>
+          <div className="mt-8 max-w-2xl mx-auto">
+            <p className="text-sm text-white/55 leading-relaxed">
+              Every MADS drone is built from a bird — its aerodynamics, its coordination logic, its capacity to fly in concert with others. We are not building drones that happen to swarm. We are building systems that fly the way nature already proved they should.
+            </p>
+            <p className="text-xs text-white/35 mt-2 tracking-wide">Based in Ottawa, Ontario. Engineered from first principles.</p>
+          </div>
         </div>
       </div>
     </div>

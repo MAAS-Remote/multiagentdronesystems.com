@@ -145,7 +145,7 @@ const ContactPage: React.FC = () => {
     <div className="min-h-screen bg-gray-100 flex">
       <Helmet>
         <title>Contact MADS — Get in Touch | Multi-Agent Drone Systems</title>
-        <meta name="description" content="Contact Multi-Agent Drone Systems in Ottawa, Canada. Call +1 (613) 413-2941, email info@multiagentdronesystems.com, or send a message using our contact form." />
+        <meta name="description" content="Contact Multi-Agent Drone Systems in Ottawa, Canada. Call +1 (613) 413-1492, email info@multiagentdronesystems.com, or send a message using our contact form." />
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema([
             { name: 'Home', url: SITE_URL },

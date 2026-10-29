@@ -34,7 +34,7 @@ const Ottawa: React.FC = () => {
               We are a Canadian incorporated company building hardware in a regulatory environment that takes airspace seriously. The Ottawa engineering ecosystem — universities, government labs, and the defence/aerospace cluster — is the right place to do this kind of work.
             </motion.p>
             <motion.p className="text-lg text-gray-700 leading-relaxed mb-8" {...fadeUp(0.2)}>
-              Our research origins are at McGill University in Montreal — one of Canada's leading research universities and the institution where the science behind our autonomous coordination work was developed. We work with customers across Canada and are available for international projects. If your operation requires a drone system that does not yet exist, that is the conversation we are designed to have.
+              Our research origins are in Montreal — at some of Canada's leading research universities and the institution where the science behind our autonomous coordination work was developed. We work with customers across Canada and are available for international projects. If your operation requires a drone system that does not yet exist, that is the conversation we are designed to have.
             </motion.p>
 
             <motion.div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 space-y-4" {...fadeUp(0.25)}>

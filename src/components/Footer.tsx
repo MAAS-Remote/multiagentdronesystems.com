@@ -147,7 +147,7 @@ const Footer: React.FC = () => {
                   href="tel:+16134132941"
                   className="hover:text-white transition-colors duration-300"
                 >
-                  +1 (613) 413-2941
+                  +1 (613) 413-1492
                 </a>
               </p>
             </address>

@@ -360,7 +360,7 @@ const AboutPage: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-xs text-gray-400 mb-0.5">Phone</p>
-                  <p className="font-semibold text-white">+1-613-413-2941</p>
+                  <p className="font-semibold text-white">+1-613-413-1492</p>
                 </div>
               </a>
 

@@ -352,7 +352,7 @@ const AboutPage: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <a
-                href="tel:+16134132941"
+                href="tel:+16134131492"
                 className="flex items-center gap-4 bg-white/10 hover:bg-white/20 border border-white/10 hover:border-white/20 rounded-2xl px-6 py-4 transition-all duration-300 group"
               >
                 <div className="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors flex-shrink-0">

@@ -53,7 +53,7 @@ const Ottawa: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-xs text-gray-400 mb-0.5">Phone</p>
-                  <p className="text-gray-900 font-medium group-hover:text-gray-700 transition-colors">+1-613-413-2941</p>
+                  <p className="text-gray-900 font-medium group-hover:text-gray-700 transition-colors">+1-613-413-1492</p>
                 </div>
               </a>
             </motion.div>
